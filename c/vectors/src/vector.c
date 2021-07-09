@@ -162,8 +162,17 @@ data_t deleteAndReturn(void* vec,size_t index){
     vector* v = (vector*) vec; 
     
     data_t val = (v->data)[index];
+    if(v->currentSize == 0){
+        fprintf(stderr,"Error: Empty vector\n");
+        exit(1);
+    }
+
     size_t lastIndex = v->currentSize - 1;
-    
+    // check index bounds
+    if(lastIndex < index){
+        fprintf(stderr,"Error: out of bounds index: %lu\n",index);
+        exit(1);
+    }
     data_t* baseAddr = v->data;
 
     for(size_t i = index;i <= lastIndex; ++i){
@@ -176,11 +185,17 @@ data_t deleteAndReturn(void* vec,size_t index){
 
 
 // remove from end, return value
-data_t pop(void* vec);
+data_t pop(void* vec){
+    return deleteAndReturn(vec,0);
+}
 
-// // //  delete item at index, shifting all trailing elements left
-void delete(void* vec,size_t index); 
-// // // looks for value and removes index holding it (even if in multiple places)
+//  delete item at index, shifting all trailing elements left
+void delete(void* vec,size_t index){
+    deleteAndReturn(vec,index);
+}
+
+// TODO: finish this 
+// looks for value and removes index holding it (even if in multiple places)
 // void removeAll(void* vec,data_t item);
-// // // looks for value and returns first index with that value, -1 if not found
+// looks for value and returns first index with that value, -1 if not found
 // size_t find(void* vec,data_t item);

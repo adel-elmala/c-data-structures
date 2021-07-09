@@ -90,9 +90,10 @@ int main(int argc, char** argv)
     printf("Empty?: %d\n",is_empty(vecA));
     
     size_t last = size(vecA) ;
-
+    // test pop
+    printf("pop!\n");
     for(size_t i = 0;i != last;++i){
-        fprintf(stdout,"%d\t",deleteAndReturn(vecA,0));
+        fprintf(stdout,"%d\t",pop(vecA));
     } 
     fprintf(stdout,"\n");
 
@@ -111,6 +112,22 @@ int main(int argc, char** argv)
     printf("size is: %lu\n",size(vecA));
     printf("capacity is: %lu\n",capacity(vecA));
     printf("Empty?: %d\n",is_empty(vecA));
+
+    delete(vecA,0);
+    prettyPrint(vecA);
+
+    printf("size is: %lu\n",size(vecA));
+    printf("capacity is: %lu\n",capacity(vecA));
+    printf("Empty?: %d\n",is_empty(vecA));
+    
+    pop(vecA);
+    prettyPrint(vecA);
+
+    printf("size is: %lu\n",size(vecA));
+    printf("capacity is: %lu\n",capacity(vecA));
+    printf("Empty?: %d\n",is_empty(vecA));
+    
+    
 
     destroyVector(vecA);
 
