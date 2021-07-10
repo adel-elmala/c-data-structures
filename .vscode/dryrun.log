@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures'
+make: Leaving directory '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+ 

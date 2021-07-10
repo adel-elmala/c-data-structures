@@ -14,7 +14,7 @@ BIN = ./bin/testLL.out
 
 testLL:$(SRC) $(HEADERS)
 	$(CC) $(CFLAGS) $(INCLUDE) $(SRC) $(UTILS) -o $@ 
-	mv $@ ./bin
+	# mv $@ ./bin
 
 
 .PHONY:setupDir,clean,valgrind

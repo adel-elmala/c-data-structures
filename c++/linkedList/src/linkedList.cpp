@@ -103,8 +103,9 @@ void linkedList<dataType>::push_front(dataType& item){
     newNode->data = item;
     newNode->next = this->head;
     newNode->prev = nullptr;
+    if(this->listSize != 0)
+        this->head->prev = newNode;
 
-    this->head->prev = newNode;
     this->head= newNode;
     this->listSize += 1; 
 }
