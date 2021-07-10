@@ -1,33 +1,31 @@
-CC = gcc
-CFLAGS = -Wall  -pedantic 
+CC = g++
+CFLAGS = -g -Wall  -pedantic 
 
-SRC = 	src/main.c \
-		src/vector.c
+SRC = 	src/testLL.cpp \
+		src/linkedList.cpp
 
+UTILS = "../../utils/logger/src/logger.c"
 
-HEADERS = include/vector.h
+HEADERS = include/linkedList.h
 INCLUDE = -I "./include" 
-INCLUDE += -I "../common"
+INCLUDE += -I "../../utils/logger/include"
 
-BIN = ./bin/main.out
+BIN = ./bin/testLL.out
 
-main:$(SRC) $(HEADERS)
-	$(CC) $(CFLAGS) $(INCLUDE) $(SRC) -o $@ 
+testLL:$(SRC) $(HEADERS)
+	$(CC) $(CFLAGS) $(INCLUDE) $(SRC) $(UTILS) -o $@ 
 	mv $@ ./bin
-
-# vector:src/vector.c include/vector.h 
-# 	$(CC) $(CFLAGS) $(INCLUDE) $< -o $@ 
 
 
 .PHONY:setupDir,clean,valgrind
 setupDir:
 	mkdir bin src include 
-	mv *.c ./src
+	mv *.cpp ./src
 	mv *.h ./include
 clean:
 	rm bin/*
 valgrind:
-	valgrind --leak-check=full --show-leak-kinds=all ./bin/main
+	valgrind --leak-check=full --show-leak-kinds=all ./bin/testLL
 
 
 
