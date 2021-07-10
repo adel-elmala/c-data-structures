@@ -33,24 +33,33 @@ void updateCapacity(void* vec);
 
 
 void push(void* vec,data_t *item);
-// -----------
-// //inserts item at index, shifts that index's value and trailing elements to the right
+
+//inserts item at index, shifts that index's value and trailing elements to the right
 void insert(void* vec,size_t index, data_t *item);
 
-// // can use insert above at index 0
+// can use insert above at index 0
 void prepend(void* vec,data_t *item);
 
-// //  remove from end, return value
+//  remove from end, return value
 data_t pop(void* vec);
 
-// //  delete item at index, shifting all trailing elements left
+//  delete item at index, shifting all trailing elements left
 void delete(void* vec,size_t index); 
-// // looks for value and removes index holding it (even if in multiple places)
-void removeAll(void* vec,data_t item);
-// // looks for value and returns first index with that value, -1 if not found
-size_t find(void* vec,data_t item);
+
+
+// looks for value and returns first index with that value, -1 if not found
+size_t find(void* vec,data_t *item);
+
+
+//  delete item at index, shifting all trailing elements left and returns the value of the deleted element
 data_t deleteAndReturn(void* vec,size_t index);
 
+
+// performs a linear search to and returns all indecies for the desired item (in a vector :D)
+void* findAll(void* vec,data_t* item);
+
+// looks for value and removes index holding it (even if in multiple places)
+void removeAll(void* vec,data_t* item);
 
 
 

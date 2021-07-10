@@ -170,7 +170,7 @@ data_t deleteAndReturn(void* vec,size_t index){
     size_t lastIndex = v->currentSize - 1;
     // check index bounds
     if(lastIndex < index){
-        fprintf(stderr,"Error: out of bounds index: %lu\n",index);
+        fprintf(stderr,"Error: out of bounds index: %lu,\tVector's size is: %lu\n",index,lastIndex);
         exit(1);
     }
     data_t* baseAddr = v->data;
@@ -195,7 +195,39 @@ void delete(void* vec,size_t index){
 }
 
 // TODO: finish this 
+
+
+// performs a linear search to and returns all indecies for the desired item (in a vector :D)
+void* findAll(void* vec,data_t* item){
+    vector* v = (vector*) vec;
+    size_t last = v->currentSize; 
+    void * indiciesVec = createVector(last);
+    
+    // ignore warning for now
+    for(int i = 0;i < last;++i)
+    {
+        if((v->data)[i] == *item)
+            push(indiciesVec,&i);
+    }
+    return indiciesVec; 
+}
+
+
 // looks for value and removes index holding it (even if in multiple places)
-// void removeAll(void* vec,data_t item);
+void removeAll(void* vec,data_t* item){
+
+    vector* indiciesVec = (vector*) findAll(vec,item);
+    size_t last = (indiciesVec->currentSize);
+    for(size_t i = last - 1;i < last;--i){
+        delete(vec,(indiciesVec->data)[i]);
+    }
+    destroyVector(indiciesVec);
+}
+
 // looks for value and returns first index with that value, -1 if not found
-// size_t find(void* vec,data_t item);
+size_t find(void* vec,data_t *item){
+    vector* indecies = (vector*)findAll(vec,item);
+    size_t firstIndex = indecies->data[0];
+    destroyVector(indecies);
+    return firstIndex;
+}

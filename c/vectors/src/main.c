@@ -89,19 +89,19 @@ int main(int argc, char** argv)
     printf("capacity is: %lu\n",capacity(vecA));
     printf("Empty?: %d\n",is_empty(vecA));
     
-    size_t last = size(vecA) ;
-    // test pop
-    printf("pop!\n");
-    for(size_t i = 0;i != last;++i){
-        fprintf(stdout,"%d\t",pop(vecA));
-    } 
-    fprintf(stdout,"\n");
+    // size_t last = size(vecA) ;
+    // // test pop
+    // printf("pop!\n");
+    // for(size_t i = 0;i != last;++i){
+    //     fprintf(stdout,"%d\t",pop(vecA));
+    // } 
+    // fprintf(stdout,"\n");
 
-    prettyPrint(vecA);
+    // prettyPrint(vecA);
 
-    printf("size is: %lu\n",size(vecA));
-    printf("capacity is: %lu\n",capacity(vecA));
-    printf("Empty?: %d\n",is_empty(vecA));
+    // printf("size is: %lu\n",size(vecA));
+    // printf("capacity is: %lu\n",capacity(vecA));
+    // printf("Empty?: %d\n",is_empty(vecA));
 
 
 
@@ -113,24 +113,46 @@ int main(int argc, char** argv)
     printf("capacity is: %lu\n",capacity(vecA));
     printf("Empty?: %d\n",is_empty(vecA));
 
-    delete(vecA,0);
+    // delete(vecA,0);
+    // prettyPrint(vecA);
+
+    // printf("size is: %lu\n",size(vecA));
+    // printf("capacity is: %lu\n",capacity(vecA));
+    // printf("Empty?: %d\n",is_empty(vecA));
+    
+    // pop(vecA);
+    // prettyPrint(vecA);
+
+    // printf("size is: %lu\n",size(vecA));
+    // printf("capacity is: %lu\n",capacity(vecA));
+    // printf("Empty?: %d\n",is_empty(vecA));
+    
+
+    printf("searching!\n");
+
+    void* indcies = findAll(vecA,&r); 
+
+    prettyPrint(indcies);
+
+    printf("size is: %lu\n",size(indcies));
+    printf("capacity is: %lu\n",capacity(indcies));
+    printf("Empty?: %d\n",is_empty(indcies));
+    destroyVector(indcies);
+    
+    
+    printf("deleting!\n");
+    removeAll(vecA,&r);
+    
     prettyPrint(vecA);
 
     printf("size is: %lu\n",size(vecA));
     printf("capacity is: %lu\n",capacity(vecA));
     printf("Empty?: %d\n",is_empty(vecA));
-    
-    pop(vecA);
-    prettyPrint(vecA);
 
-    printf("size is: %lu\n",size(vecA));
-    printf("capacity is: %lu\n",capacity(vecA));
-    printf("Empty?: %d\n",is_empty(vecA));
-    
-    
+    int fi = 444;
+    printf("found at:%lu\n",find(vecA,&fi));
 
     destroyVector(vecA);
-
 }
 
 
