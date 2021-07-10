@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -pedantic 
+CFLAGS = -Wall  -pedantic 
 
 SRC = 	src/main.c \
 		src/vector.c

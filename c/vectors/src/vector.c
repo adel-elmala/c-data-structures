@@ -82,7 +82,7 @@ data_t at(void* vec,size_t index){
 
 
 //same as 'at' except it allows indexing up to the capacity of the vector
-data_t at_all(void* vec,size_t index){
+data_t atExtended(void* vec,size_t index){
     
     vector* v = (vector*) vec; 
     // no nedd to check below zero as this would cause a compiler error (i.e unsigned long is always >= 0)

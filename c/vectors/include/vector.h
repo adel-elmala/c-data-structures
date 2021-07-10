@@ -7,7 +7,7 @@
 #include "../../common/common.h"
 
 // change this typedef to the desired vec_item type (i.e. char, int , float , struct,...) 
-typedef int data_t;
+typedef double data_t;
 
 
 
@@ -25,6 +25,7 @@ bool is_empty(void* vec);
 
 //returns item at given index, blows up if index out of bounds
 data_t at(void* vec,size_t index);
+data_t atExtended(void* vec,size_t index);
 
 // private function
 void* resize(void* vec,size_t newCapacity);

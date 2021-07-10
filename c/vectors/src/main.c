@@ -19,7 +19,7 @@ int main(int argc, char** argv)
 
 
 
-    int a = 111;
+    double a = 111.0;
     push(vecA,&a);
     prettyPrint(vecA);
 
@@ -28,7 +28,7 @@ int main(int argc, char** argv)
     printf("Empty?: %d\n",is_empty(vecA));
 
  
-    int b = 222;
+    double b = 222;
     push(vecA,&b);
     prettyPrint(vecA);
 
@@ -37,7 +37,7 @@ int main(int argc, char** argv)
     printf("Empty?: %d\n",is_empty(vecA));
 
     
-    int c = 333;
+    double c = 333;
     push(vecA,&c);
     prettyPrint(vecA);
 
@@ -46,7 +46,7 @@ int main(int argc, char** argv)
     printf("Empty?: %d\n",is_empty(vecA));
 
     
-    int d = 444;
+    double d = 444;
     push(vecA,&d);
     prettyPrint(vecA);
 
@@ -55,7 +55,7 @@ int main(int argc, char** argv)
     printf("Empty?: %d\n",is_empty(vecA));
     
     
-    int e = 555;
+    double e = 555;
     push(vecA,&e);
     prettyPrint(vecA);
 
@@ -63,7 +63,7 @@ int main(int argc, char** argv)
     printf("capacity is: %lu\n",capacity(vecA));
     printf("Empty?: %d\n",is_empty(vecA));
     
-    int f = 666;
+    double f = 666;
     push(vecA,&f);
     prettyPrint(vecA);
 
@@ -71,7 +71,7 @@ int main(int argc, char** argv)
     printf("capacity is: %lu\n",capacity(vecA));
     printf("Empty?: %d\n",is_empty(vecA));
     
-    int l = 777;
+    double l = 777;
     insert(vecA,6,&l);
     
     prettyPrint(vecA);
@@ -80,7 +80,7 @@ int main(int argc, char** argv)
     printf("capacity is: %lu\n",capacity(vecA));
     printf("Empty?: %d\n",is_empty(vecA));
     
-    int g = 888;
+    double g = 888;
     prepend(vecA,&g);
     
     prettyPrint(vecA);
@@ -105,7 +105,7 @@ int main(int argc, char** argv)
 
 
 
-    int r = 111;
+    double r = 111;
     push(vecA,&r);
     prettyPrint(vecA);
 
@@ -149,10 +149,15 @@ int main(int argc, char** argv)
     printf("capacity is: %lu\n",capacity(vecA));
     printf("Empty?: %d\n",is_empty(vecA));
 
-    int fi = 444;
+    double fi = 444;
     printf("found at:%lu\n",find(vecA,&fi));
 
     destroyVector(vecA);
+
+    // void* fVec = veccreateVector(5);
+
+
+
 }
 
 
@@ -165,7 +170,8 @@ void prettyPrint(void* vec){
             fprintf(stdout,"\n");
         
         // replace this with the appropriate printing function for complex data-structres
-        fprintf(stdout,"%d\t",at_all(vec,i));
+        // fprintf(stdout,"%d\t",atExtended(vec,i));
+        fprintf(stdout,"%lf\t",atExtended(vec,i));
     }
     
     fprintf(stdout,"]\n");
