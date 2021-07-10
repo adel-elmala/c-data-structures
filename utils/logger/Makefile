@@ -1,22 +1,21 @@
 CC = gcc
-CFLAGS = -Wall  -pedantic 
+CFLAGS = -Wall -pedantic 
 
-SRC = 	src/main.c \
-		src/vector.c
+SRC = 	src/testLogger.c \
+		src/logger.c
 
 
-HEADERS = include/vector.h
+HEADERS = include/logger.h \
+		  include/loggerBase.h
+
 INCLUDE = -I "./include" 
-INCLUDE += -I "../../common"
+# INCLUDE += -I "../../common"
 
-BIN = ./bin/main.out
+BIN = ./bin/testLogger.out
 
-main:$(SRC) $(HEADERS)
+testLogger:$(SRC) $(HEADERS)
 	$(CC) $(CFLAGS) $(INCLUDE) $(SRC) -o $@ 
 	mv $@ ./bin
-
-# vector:src/vector.c include/vector.h 
-# 	$(CC) $(CFLAGS) $(INCLUDE) $< -o $@ 
 
 
 .PHONY:setupDir,clean,valgrind

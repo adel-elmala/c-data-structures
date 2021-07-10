@@ -7,7 +7,7 @@ SRC = 	src/main.c \
 
 HEADERS = include/vector.h
 INCLUDE = -I "./include" 
-INCLUDE += -I "../../common"
+INCLUDE += -I "../common"
 
 BIN = ./bin/main.out
 

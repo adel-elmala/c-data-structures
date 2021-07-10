@@ -4,10 +4,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-#include "../../common/common.h"
+#include "common.h"
 
 // change this typedef to the desired vec_item type (i.e. char, int , float , struct,...) 
-typedef double data_t;
+typedef int data_t;
 
 
 
