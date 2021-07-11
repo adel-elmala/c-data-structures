@@ -124,7 +124,8 @@ void linkedList<dataType>::push_front(dataType& item){
     newNode->prev = nullptr;
     if(this->listSize != 0)
         this->head->prev = newNode;
-
+    if(this->listSize == 0)
+        tail = newNode;
     this->head= newNode;
     this->listSize += 1; 
 }
@@ -165,35 +166,144 @@ void linkedList<dataType>::prettyPrint(void) const{
         ++idx;
     }
     std::cout << "]\n";
+}
+
+
+
+// adds an item at the end
+
+template<typename dataType>
+void linkedList<dataType>::push_back(dataType& item)
+{
+    node<dataType>* newNode = new(node<dataType>);
+    // node<dataType>* tmp = tail;
+    // fill newNode data 
+    newNode->data = item;
+    newNode->next = nullptr;
+    newNode->prev = tail;
+    // check if  empty list
+    if((tail == nullptr) && (head == nullptr)){
+        // change head too if empty
+        head = newNode;
+    }
+    else{
+        // change last node data
+        printf("not empty\n");
+        tail->next = newNode;
+        // printf("not empty\n");
+
+    }
+    tail = newNode;
+    this->listSize += 1;
+}
+
+// removes end item and returns its value
+
+template<typename dataType>
+dataType linkedList<dataType>:: pop_back(void){
+    dataType tmp = tail->data;
+    node<dataType>* tmpTail = tail;
+    
+    // check if empty
+    if(tmpTail == nullptr)
+    {
+        logError("Empty List");
+        this->~linkedList();
+        exit(1);
+    }
+    //  update tail
+    tail = tail->prev;
+    tail->next = nullptr;
+    this->listSize -= 1;
+    // free last node
+    delete tmpTail;
+    return tmp;
+}
+
+
+// get value of front item
+template<typename dataType>
+dataType linkedList<dataType>::front(void) const 
+{
+    checkEmpty();
+    return head->data;
+
+}
+
+
+// get value of end item
+template<typename dataType>
+dataType linkedList<dataType>::back(void)const
+{
+    checkEmpty();
+    return  tail->data;
 
 }
 
 
 
-// // adds an item at the end
+// removes node at given index
+template<typename dataType>
+void linkedList<dataType>::erase(std::size_t index){
+    checkEmpty();
+    // check if in bounds
+    if(index > (listSize - 1))
+    {
+        logError("out of bounds index!");
+        this->~linkedList();
+        exit(1);
+    }
+    if(index == 0){
+        pop_front();
+        return;
+    }
+    if(index == (listSize -1)){
+        pop_back();
+        return;
+    }
+    node<dataType>* wantedNode = nullptr;
+    // start from end
+    if(index > (listSize / 2))
+    {   
+        logInfo("starting from end!");
+        wantedNode = tail;
+        size_t i= (listSize - 1);
+        while(i > index){
+            wantedNode = wantedNode->prev;
+            --i;
+        }
+    }
+    // start from head
+    else{
 
-// template<typename dataType>
-// void linkedList<dataType>::push_back(dataType& item);
+        logInfo("starting from beginning!");
+        wantedNode = head;
+        size_t i = 0;
+        while(i < index){
+            wantedNode = wantedNode->next;
+            ++i;
+        }
+    }
 
-// // removes end item and returns its value
+    wantedNode->prev->next = wantedNode->next;
+    wantedNode->next->prev = wantedNode->prev;
+    delete wantedNode;
+    listSize -= 1;
+}
 
-// template<typename dataType>
-// dataType linkedList<dataType>:: pop_back(void);
+// removes node at given index
+template<typename dataType>
+inline void linkedList<dataType>::checkEmpty(void)
+{
+    // check if empty
+    if(this->listSize == 0)
+    {
+        logError("Empty List");
+        this->~linkedList();
+        exit(1);
+    }
 
-// // get value of front item
-
-// template<typename dataType>
-// dataType linkedList<dataType>::front(void);
-
-// // get value of end item
-
-// template<typename dataType>
-// dataType linkedList<dataType>::back(void);
-
-// // removes node at given index
-
-// template<typename dataType>
-// void linkedList<dataType>::erase(std::size_t index);
+}
 
 // // returns the value of the node at nth position from the end of the list
 

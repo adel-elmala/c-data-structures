@@ -17,6 +17,8 @@ template <typename dataType>
 class linkedList
 {
 private:
+    inline void checkEmpty(void);
+
     node<dataType> * head;
     node<dataType> * tail;
     std::size_t listSize;
