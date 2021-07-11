@@ -6,7 +6,7 @@ using namespace std;
 int main(int argc,char ** argv)
 {
    logStartLine("start testing!");
-    linkedList<int> lst1;
+    linkedList<float> lst1;
     // linkedList<int> lst2 = lst1;
     cout << "size: " << lst1.size() << endl;
     cout << "empty?: " << lst1.empty() << endl;
@@ -14,7 +14,7 @@ int main(int argc,char ** argv)
     
     
     logStartLine("test (push_front)");
-    int a[10] = {1,2,3,4,5,6,7,8,9,10};
+    float a[10] = {1.125f,2.0f,3.0f,4.0f,5.0f,6.0f,7.0f,8.0f,9.0f,10.0f};
     for(int i = 0 ; i < 10 ; ++i)
         lst1.push_front(a[i]);
     cout << "size: " << lst1.size() << endl;
@@ -37,13 +37,13 @@ int main(int argc,char ** argv)
     
     logStartLine("test (push_back");
     
-    int ll = 123;
+    float ll = 123;
     lst1.push_back(ll);
     lst1.prettyPrint();
     cout << "size: " << lst1.size() << endl;
     cout << "empty?: " << lst1.empty() << endl;
     
-    int l2 = 456;
+    float l2 = 456;
     lst1.push_back(l2);
     lst1.prettyPrint();
     cout << "size: " << lst1.size() << endl;
@@ -90,6 +90,6 @@ int main(int argc,char ** argv)
     logEndLine();
 
     
-
+    // linkedList<float> lst2;
     // lst2.prettyPrint();
 }
