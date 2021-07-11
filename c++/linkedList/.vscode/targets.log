@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jul 10 23:17:34 2021
+# Make data base, printed on Sun Jul 11 01:13:33 2021
 
 # Variables
 
@@ -267,9 +267,9 @@ DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=f0c4b723a24ac2a4b97b9fe
 
 # Directories
 
-# . (device 2051, inode 174281): 7 files, no impossibilities.
+# . (device 2051, inode 174281): 8 files, no impossibilities.
 
-# 7 files, no impossibilities in 1 directories.
+# 8 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -302,7 +302,7 @@ setupDir:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-10 23:17:29.9852103
+#  Last modified 2021-07-10 23:33:40.1299607
 #  File has been updated.
 #  Successfully updated.
 
@@ -350,7 +350,7 @@ valgrind:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 28):
-	valgrind --leak-check=full --show-leak-kinds=all ./bin/testLL
+	valgrind --leak-check=full --show-leak-kinds=all ./testLL
 
 # Not a target:
 src/testLL.cpp:
@@ -369,9 +369,9 @@ src/testLL.cpp:
 # strcache buffers: 1 (0) / strings = 21 / storage = 210 B / avg = 10 B
 # current buf: size = 8162 B / used = 210 B / count = 21 / avg = 10 B
 
-# strcache performance: lookups = 30 / hit rate = 30%
+# strcache performance: lookups = 31 / hit rate = 32%
 # hash-table stats:
-# Load=21/8192=0%, Rehash=0, Collisions=1/30=3%
-# Finished Make data base on Sat Jul 10 23:17:34 2021
+# Load=21/8192=0%, Rehash=0, Collisions=1/31=3%
+# Finished Make data base on Sun Jul 11 01:13:33 2021
 
  

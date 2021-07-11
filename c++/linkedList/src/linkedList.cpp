@@ -45,7 +45,7 @@ linkedList<dataType>::~linkedList(void)
 // returns number of data elements in list
 
 template<typename dataType>
-std::size_t linkedList<dataType>::size(){
+std::size_t linkedList<dataType>::size()const{
     return this->listSize;
 }
 
@@ -53,7 +53,7 @@ std::size_t linkedList<dataType>::size(){
 
 
 template<typename dataType>
-bool linkedList<dataType>::empty(){
+bool linkedList<dataType>::empty() const{
     return this->listSize == 0;
 }
 
@@ -61,18 +61,19 @@ bool linkedList<dataType>::empty(){
 
 // returns the value of the nth item (starting at 0 for first)
 template<typename dataType>
-dataType& linkedList<dataType>::operator[](std::size_t index){
+dataType& linkedList<dataType>::operator[](std::size_t index)
+{
     // check if in bounds
-    if(index > (this->listSize)){
-            logError("out of bounds");
-            this->~linkedList();
-            exit(0);
+    if((this->listSize) - 1 < index)
+    {
+        logError("out of bounds");
+        this->~linkedList();
+        exit(0);
     }
     node<dataType>* current = this->head;
-    node<dataType>* tail = this->tail;
     
     std::size_t idx = 0;
-    while(current != tail){
+    while(current != nullptr){
         if(idx == index)
             return current->data;
         else
@@ -80,18 +81,36 @@ dataType& linkedList<dataType>::operator[](std::size_t index){
             current = current->next;
             ++idx;
         }
-
     }
-    
 }
 
 
-// template<typename dataType>
-// const dataType& linkedList<dataType>::operator[](std::size_t index) const{
+template<typename dataType>
+const dataType& linkedList<dataType>::operator[](std::size_t index) const
+{
+    // check if in bounds
+    if((this->listSize) - 1 < index)
+    {
+        logError("out of bounds");
+        this->~linkedList();
+        exit(0);
+    }
+    
+    node<dataType>* current = this->head;
+    
+    std::size_t idx = 0;
+    while(current != nullptr){
+        if(idx == index)
+            return current->data;
+        else
+        {
+            current = current->next;
+            ++idx;
+        }
+    }
+}
 
-// }
-
-// // // insert value at index, so current item at that index is pointed to by new item at index
+// insert value at index, so current item at that index is pointed to by new item at index
 // insert(index, value);
 
 
@@ -110,10 +129,46 @@ void linkedList<dataType>::push_front(dataType& item){
     this->listSize += 1; 
 }
 
-// //  remove front item and return its value
+//  remove front item and return its value
 
-// template<typename dataType>
-// dataType linkedList<dataType>::pop_front(void);
+template<typename dataType>
+dataType linkedList<dataType>::pop_front(void){
+    // check  if not empty
+    if(empty()){
+        logError("List is Empty");
+        this->~linkedList();
+        exit(1);
+    }
+    node<dataType>* firstNode = this->head;
+    this->head = firstNode->next;
+    this->head->prev = nullptr;
+    dataType tmpData = firstNode->data;
+    delete firstNode;
+    this->listSize -= 1 ;
+    return tmpData;
+}
+
+template<typename dataType>
+void linkedList<dataType>::prettyPrint(void) const{
+    
+    node<dataType> * current = head;
+    std::size_t idx = 0;
+    
+    std::cout << "[";
+    while(current != nullptr)
+    {
+        if(idx % 15 == 0 && (idx != 0))
+            std::cout << std::endl;
+        
+        std::cout << this->operator[](idx)<<" ,";   
+        current = current->next; 
+        ++idx;
+    }
+    std::cout << "]\n";
+
+}
+
+
 
 // // adds an item at the end
 

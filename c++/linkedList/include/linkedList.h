@@ -25,10 +25,10 @@ public:
     ~linkedList();
 
     // returns number of data elements in list
-    std::size_t size();
+    std::size_t size() const;
     
     // bool returns true if empty
-    bool empty();
+    bool empty() const;
     
     // returns the value of the nth item (starting at 0 for first)
     dataType& operator[](std::size_t index);
@@ -51,22 +51,23 @@ public:
     dataType pop_back(void);
 
     // get value of front item
-    dataType front(void);
+    dataType front(void) const;
 
     // get value of end item
-    dataType back(void);
+    dataType back(void) const;
     
     // removes node at given index
     void erase(std::size_t index);
     
     // returns the value of the node at nth position from the end of the list
-    dataType value_n_from_end(std::size_t n);
+    dataType value_n_from_end(std::size_t n) const;
     
     // reverses the list
     void reverse(void);
    
     //  removes the first item in the list with this value
     void remove_value(dataType value);
+    void prettyPrint(void) const;
 };
 
 

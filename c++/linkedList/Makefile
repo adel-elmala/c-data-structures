@@ -25,7 +25,7 @@ setupDir:
 clean:
 	rm bin/*
 valgrind:
-	valgrind --leak-check=full --show-leak-kinds=all ./bin/testLL
+	valgrind --leak-check=full --show-leak-kinds=all ./testLL
 
 
 
