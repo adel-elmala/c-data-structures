@@ -321,12 +321,53 @@ dataType linkedList<dataType>:: value_n_from_end(std::size_t n) const {
 
 }
     
+
 // reverses the list
-
-// template<typename dataType>
-// void linkedList<dataType>::reverse(void);
+template<typename dataType>
+void linkedList<dataType>::reverse(void){
+    node<dataType>* current = head;
+    node<dataType>* tmp = nullptr;
+    // std::size_t length = listSize;
+    if(this->empty()){
+        logWarning("List is Empty");
+        return;
+    }
+    while(current != nullptr)
+    {
+        tmp = current->next;
+        current->next = current->prev;
+        current->prev = tmp;
+        current = tmp;
+    }
+    tmp = head;
+    head = tail;
+    tail = tmp;
+    return;
+}
    
-// //  removes the first item in the list with this value
+//  removes the first item in the list with this value
 
-// template<typename dataType>
-// void linkedList<dataType>::remove_value(dataType value);
+template<typename dataType>
+void linkedList<dataType>::remove_value(dataType value){
+    if(this->empty())
+    {
+        logWarning("Empty List!");
+        return;
+    }
+
+    node<dataType>* current = head;
+    std::size_t size = listSize;
+    std:size_t idx = 0;
+    while(current != nullptr)
+    {
+        if(current->data == value)
+            erase(idx);
+        ++idx;
+        current = current->next;
+    }
+    if(listSize ==size )
+    {
+        logWarning("Value is not found in the List");
+        return;
+    }
+}

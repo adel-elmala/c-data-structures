@@ -69,6 +69,7 @@ public:
    
     //  removes the first item in the list with this value
     void remove_value(dataType value);
+   
     void prettyPrint(void) const;
 };
 

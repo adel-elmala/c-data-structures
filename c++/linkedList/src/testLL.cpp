@@ -133,4 +133,42 @@ int main(int argc,char ** argv)
     
     logEndLine();
     
+
+    logStartLine("test (reverse)");
+
+    lst1.reverse();    
+    lst1.prettyPrint();
+    cout << "size: " << lst1.size() << endl;
+    cout << "empty?: " << lst1.empty() << endl;
+    
+    float lll = 987;
+    lst1.push_front(lll);
+    
+    lst1.reverse();
+    lst1.prettyPrint();
+    cout << "size: " << lst1.size() << endl;
+    cout << "empty?: " << lst1.empty() << endl;
+    
+    logEndLine();
+    
+    logStartLine("test (remove_value)");
+
+    lst1.remove_value(987.0f);    
+    lst1.prettyPrint();
+    cout << "size: " << lst1.size() << endl;
+    cout << "empty?: " << lst1.empty() << endl;
+    
+
+    lst1.remove_value(1.0f);    
+    lst1.prettyPrint();
+    cout << "size: " << lst1.size() << endl;
+    cout << "empty?: " << lst1.empty() << endl;
+    
+    lst1.remove_value(5.0f);        
+    lst1.prettyPrint();
+    cout << "size: " << lst1.size() << endl;
+    cout << "empty?: " << lst1.empty() << endl;
+    
+    logEndLine();
+    
 }
