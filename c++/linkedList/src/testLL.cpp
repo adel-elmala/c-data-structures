@@ -6,7 +6,7 @@ using namespace std;
 int main(int argc,char ** argv)
 {
    logStartLine("start testing!");
-    linkedList<float> lst1;
+    linkedList<double> lst1;
     // linkedList<int> lst2 = lst1;
     cout << "size: " << lst1.size() << endl;
     cout << "empty?: " << lst1.empty() << endl;
@@ -14,7 +14,7 @@ int main(int argc,char ** argv)
     
     
     logStartLine("test (push_front)");
-    float a[10] = {1.125f,2.0f,3.0f,4.0f,5.0f,6.0f,7.0f,8.0f,9.0f,10.0f};
+    double a[10] = {1.125,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0};
     for(int i = 0 ; i < 10 ; ++i)
         lst1.push_front(a[i]);
     cout << "size: " << lst1.size() << endl;
@@ -37,13 +37,13 @@ int main(int argc,char ** argv)
     
     logStartLine("test (push_back");
     
-    float ll = 123;
+    double ll = 123;
     lst1.push_back(ll);
     lst1.prettyPrint();
     cout << "size: " << lst1.size() << endl;
     cout << "empty?: " << lst1.empty() << endl;
     
-    float l2 = 456;
+    double l2 = 456;
     lst1.push_back(l2);
     lst1.prettyPrint();
     cout << "size: " << lst1.size() << endl;
@@ -141,7 +141,7 @@ int main(int argc,char ** argv)
     cout << "size: " << lst1.size() << endl;
     cout << "empty?: " << lst1.empty() << endl;
     
-    float lll = 987;
+    double lll = 987;
     lst1.push_front(lll);
     
     lst1.reverse();
