@@ -291,9 +291,9 @@ void linkedList<dataType>::erase(std::size_t index){
     listSize -= 1;
 }
 
-// removes node at given index
+
 template<typename dataType>
-inline void linkedList<dataType>::checkEmpty(void)
+inline void linkedList<dataType>::checkEmpty(void) const
 {
     // check if empty
     if(this->listSize == 0)
@@ -305,10 +305,21 @@ inline void linkedList<dataType>::checkEmpty(void)
 
 }
 
-// // returns the value of the node at nth position from the end of the list
 
-// template<typename dataType>
-// dataType linkedList<dataType>:: value_n_from_end(std::size_t n);
+// returns the value of the node at nth position from the end of the list
+template<typename dataType>
+dataType linkedList<dataType>:: value_n_from_end(std::size_t n) const {
+
+    node<dataType> * target = tail;
+
+    while(n != 0)
+    {
+        target = target->prev;
+        --n;
+    }
+    return target->data;
+
+}
     
 // reverses the list
 

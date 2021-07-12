@@ -64,6 +64,34 @@ int main(int argc,char ** argv)
     
     logEndLine();
 
+    logStartLine("test (front)");
+    
+    cout << lst1.front() << endl;
+    lst1.prettyPrint();
+    cout << "size: " << lst1.size() << endl;
+    cout << "empty?: " << lst1.empty() << endl;
+    
+    cout << lst1.front() << endl;
+    lst1.prettyPrint();
+    cout << "size: " << lst1.size() << endl;
+    cout << "empty?: " << lst1.empty() << endl;
+    logEndLine();
+    
+
+    logStartLine("test (back)");
+    
+    cout << lst1.back() << endl;
+    lst1.prettyPrint();
+    cout << "size: " << lst1.size() << endl;
+    cout << "empty?: " << lst1.empty() << endl;
+    
+    cout << lst1.back() << endl;
+    lst1.prettyPrint();
+    cout << "size: " << lst1.size() << endl;
+    cout << "empty?: " << lst1.empty() << endl;
+    logEndLine();
+    
+
     logStartLine("test (erase)");
     
     lst1.erase(0);
@@ -89,7 +117,20 @@ int main(int argc,char ** argv)
     
     logEndLine();
 
+
+    logStartLine("test (value_n_from_end)");
     
-    // linkedList<float> lst2;
-    // lst2.prettyPrint();
+    cout << "lst[0]: " << lst1.value_n_from_end(0) << endl;
+    lst1.prettyPrint();
+    cout << "size: " << lst1.size() << endl;
+    cout << "empty?: " << lst1.empty() << endl;
+    
+
+    cout << "lst[-1]: " << lst1.value_n_from_end(1) << endl;
+    lst1.prettyPrint();
+    cout << "size: " << lst1.size() << endl;
+    cout << "empty?: " << lst1.empty() << endl;
+    
+    logEndLine();
+    
 }

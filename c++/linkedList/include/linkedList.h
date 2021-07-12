@@ -17,7 +17,7 @@ template <typename dataType>
 class linkedList
 {
 private:
-    inline void checkEmpty(void);
+    inline void checkEmpty(void) const;
 
     node<dataType> * head;
     node<dataType> * tail;
