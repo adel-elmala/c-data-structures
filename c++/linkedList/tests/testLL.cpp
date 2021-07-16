@@ -1,7 +1,7 @@
 #include "logger.h"
 
 #include "linkedList.h"
-#include "linkedList.cpp"
+// #include "linkedList.cpp"
 using namespace std;
 int main(int argc,char ** argv)
 {

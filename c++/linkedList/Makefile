@@ -1,12 +1,13 @@
 CC = g++
 CFLAGS = -g -Wall  -pedantic 
 
-SRC = 	src/testLL.cpp \
-		src/linkedList.cpp
+SRC = 	tests/testLL.cpp 
+		
 
 UTILS = "../../utils/logger/src/logger.c"
 
 HEADERS = include/linkedList.h
+
 INCLUDE = -I "./include" 
 INCLUDE += -I "../../utils/logger/include"
 
@@ -20,7 +21,7 @@ testLL:$(SRC) $(HEADERS)
 .PHONY:setupDir,clean,valgrind
 setupDir:
 	mkdir bin src include 
-	mv *.cpp ./src
+	mv *.cpp ./tests
 	mv *.h ./include
 clean:
 	rm bin/*
