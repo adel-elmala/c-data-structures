@@ -1,4 +1,4 @@
-make all -f "/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/c++/linkedList/Makefile" --print-data-base --no-builtin-variables --no-builtin-rules --question
+make all -f "/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile" --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target 'all'.  Stop.
  
 # GNU Make 4.2.1
@@ -8,13 +8,13 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul 16 22:15:06 2021
+# Make data base, printed on Fri Jul 16 21:18:52 2021
 
 # Variables
 
 # 'override' directive
 GNUMAKEFLAGS := 
-# makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/c++/linkedList/Makefile', line 7)
+# makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 8)
 UTILS = "../../utils/logger/src/logger.c"
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
@@ -28,8 +28,8 @@ DESKTOP_SESSION = ubuntu
 .SHELLFLAGS := -c
 # environment
 XDG_SESSION_CLASS = user
-# makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/c++/linkedList/Makefile', line 4)
-SRC = tests/testLL.cpp 
+# makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 4)
+SRC = tests/testBS.c src/binarySearch.c 
 # environment
 XDG_SESSION_TYPE = x11
 # environment
@@ -45,23 +45,23 @@ GDMSESSION = ubuntu
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/c++/linkedList
+CURDIR := /media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch
 # makefile
 SHELL = /bin/sh
-# makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/c++/linkedList/Makefile', line 14)
-BIN = ./bin/testLL.out
+# makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 15)
+BIN = ./bin/
 # environment
 VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 JOURNAL_STREAM = 8:38095
-# makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/c++/linkedList/Makefile', line 2)
+# makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 2)
 CFLAGS = -g -Wall  -pedantic 
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
-# makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/c++/linkedList/Makefile', line 1)
-MAKEFILE_LIST :=  /media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/c++/linkedList/Makefile
+# makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 1)
+MAKEFILE_LIST :=  /media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile
 # automatic
 @F = $(notdir $@)
 # environment
@@ -87,7 +87,7 @@ LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 LC_NAME = en_CA.UTF-8
 # environment
-VSCODE_CWD = /media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures
+VSCODE_CWD = /media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -121,7 +121,7 @@ DISPLAY = :0
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/c++/linkedList
+PWD = /media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch
 # default
 .LOADED := 
 # environment
@@ -146,8 +146,8 @@ LOGNAME = adel
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 +F = $(notdir $+)
-# makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/c++/linkedList/Makefile', line 9)
-HEADERS = include/linkedList.h
+# makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 7)
+HEADERS = include/binarySearch.h
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
@@ -168,12 +168,12 @@ MAKECMDGOALS := all
 QT_IM_MODULE = ibus
 # environment
 SHLVL = 1
-# makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/c++/linkedList/Makefile', line 1)
+# makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 1)
 CC = g++
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-82aff5e7-b16a-4083-a522-bd56f9e007b0.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-7c14f525-72b0-465b-a3a1-2a56f9c5234d.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -181,8 +181,8 @@ USER = adel
 # environment
 LC_MONETARY = en_CA.UTF-8
 # makefile
-.DEFAULT_GOAL := testLL
-# makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/c++/linkedList/Makefile', line 12)
+.DEFAULT_GOAL := testHT
+# makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 13)
 INCLUDE = -I "./include"  -I "../../utils/logger/include"
 # environment
 XDG_CURRENT_DESKTOP = Unity
@@ -193,7 +193,7 @@ LC_TELEPHONE = en_CA.UTF-8
 # default
 MAKE_COMMAND := make
 # environment
-OLDPWD = /media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch
+OLDPWD = /media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/tests
 # default
 .VARIABLES := 
 # automatic
@@ -215,8 +215,6 @@ GDK_BACKEND = x11
 # environment
 LC_PAPER = en_CA.UTF-8
 # environment
-NO_AT_BRIDGE = 1
-# environment
 QT_ACCESSIBILITY = 1
 # environment
 DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
@@ -237,7 +235,7 @@ LC_ALL = C
 # environment
 DBUS_STARTER_BUS_TYPE = session
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/7a40d516_1f88_4fbc_a013_1f087331be9f
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/75d7ff7e_f9ac_4c55_8742_f65a113b7a1d
 # automatic
 ^F = $(notdir $^)
 # environment
@@ -265,7 +263,7 @@ VSCODE_PID = 20430
 # environment
 DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=93d17b4f158a8abc26ada0d360f16ca1
 # variable set hash-table stats:
-# Load=126/1024=12%, Rehash=0, Collisions=22/155=14%
+# Load=125/1024=12%, Rehash=0, Collisions=22/154=14%
 
 # Pattern-specific Variable Values
 
@@ -278,9 +276,9 @@ DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=93d17b4f158a8abc26ada0d
 
 # Implicit Rules
 
- 
 # No implicit rules.
 
+ 
 # Files
 
 # Not a target:
@@ -299,29 +297,41 @@ setupDir:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/c++/linkedList/Makefile', line 23):
-	mkdir bin src include 
+#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 25):
+	mkdir bin tests include 
 	mv *.cpp ./tests
 	mv *.h ./include
 
-testLL: tests/testLL.cpp include/linkedList.h
+# Not a target:
+include/binarySearch.h:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/c++/linkedList/Makefile', line 17):
-	$(CC) $(CFLAGS) $(INCLUDE) $(SRC) $(UTILS) -o $@ 
+
+# Not a target:
+src/binarySearch.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+testHT: tests/testBS.c src/binarySearch.c include/binarySearch.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 18):
+	$(CC) $(CFLAGS) $(INCLUDE) $(SRC) $(UTILS) -o $(BIN)$@ 
 	# mv $@ ./bin
 
 # Not a target:
-include/linkedList.h:
+tests/testBS.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/c++/linkedList/Makefile:
+/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-16 13:56:02.2115638
+#  Last modified 2021-07-16 21:18:42.0976477
 #  File has been updated.
 #  Successfully updated.
 
@@ -335,7 +345,7 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/c++/linkedList/Makefile', line 27):
+#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 29):
 	rm bin/*
 
 setupDir,clean,valgrind:
@@ -344,33 +354,27 @@ setupDir,clean,valgrind:
 #  File does not exist.
 #  File has not been updated.
 
-# Not a target:
-tests/testLL.cpp:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
 valgrind:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/c++/linkedList/Makefile', line 29):
-	valgrind --leak-check=full --show-leak-kinds=all ./testLL
+#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 31):
+	valgrind --leak-check=full --show-leak-kinds=all $(BIN)testHT
 
 # files hash-table stats:
-# Load=12/1024=1%, Rehash=0, Collisions=0/25=0%
+# Load=13/1024=1%, Rehash=0, Collisions=0/27=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 14 / storage = 265 B / avg = 18 B
-# current buf: size = 8162 B / used = 265 B / count = 14 / avg = 18 B
+# strcache buffers: 1 (0) / strings = 15 / storage = 293 B / avg = 19 B
+# current buf: size = 8162 B / used = 293 B / count = 15 / avg = 19 B
 
-# strcache performance: lookups = 22 / hit rate = 36%
+# strcache performance: lookups = 23 / hit rate = 34%
 # hash-table stats:
-# Load=14/8192=0%, Rehash=0, Collisions=0/22=0%
-# Finished Make data base on Fri Jul 16 22:15:06 2021
+# Load=15/8192=0%, Rehash=0, Collisions=0/23=0%
+# Finished Make data base on Fri Jul 16 21:18:52 2021
 
  

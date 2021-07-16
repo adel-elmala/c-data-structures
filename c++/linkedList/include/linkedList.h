@@ -84,7 +84,7 @@ public:
 template<typename dataType>
 linkedList<dataType>::linkedList()
 {
-    logInfo("constructor!");
+    logInfo("constructor!\n");
 
     this->head = nullptr;
     this->tail = nullptr;
@@ -94,7 +94,7 @@ linkedList<dataType>::linkedList()
 template<typename dataType>
 linkedList<dataType>::~linkedList(void)
 {
-    logInfo("destructor!");
+    logInfo("destructor!\n");
 
     node<dataType>* current = this->head;
     // node<dataType>* tail = this->tail;
@@ -143,7 +143,7 @@ dataType& linkedList<dataType>::operator[](std::size_t index)
     // check if in bounds
     if((this->listSize) - 1 < index)
     {
-        logError("out of bounds");
+        logError("out of bounds\n");
         this->~linkedList();
         exit(0);
     }
@@ -168,7 +168,7 @@ const dataType& linkedList<dataType>::operator[](std::size_t index) const
     // check if in bounds
     if((this->listSize) - 1 < index)
     {
-        logError("out of bounds");
+        logError("out of bounds\n");
         this->~linkedList();
         exit(0);
     }
@@ -213,7 +213,7 @@ template<typename dataType>
 dataType linkedList<dataType>::pop_front(void){
     // check  if not empty
     if(empty()){
-        logError("List is Empty");
+        logError("List is Empty\n");
         this->~linkedList();
         exit(1);
     }
@@ -284,7 +284,7 @@ dataType linkedList<dataType>:: pop_back(void){
     // check if empty
     if(tmpTail == nullptr)
     {
-        logError("Empty List");
+        logError("Empty List\n");
         this->~linkedList();
         exit(1);
     }
@@ -326,7 +326,7 @@ void linkedList<dataType>::erase(std::size_t index){
     // check if in bounds
     if(index > (listSize - 1))
     {
-        logError("out of bounds index!");
+        logError("out of bounds index!\n");
         this->~linkedList();
         exit(1);
     }
@@ -342,7 +342,7 @@ void linkedList<dataType>::erase(std::size_t index){
     // start from end
     if(index > (listSize / 2))
     {   
-        logInfo("starting from end!");
+        logInfo("starting from end!\n");
         wantedNode = tail;
         size_t i= (listSize - 1);
         while(i > index){
@@ -353,7 +353,7 @@ void linkedList<dataType>::erase(std::size_t index){
     // start from head
     else{
 
-        logInfo("starting from beginning!");
+        logInfo("starting from beginning!\n");
         wantedNode = head;
         size_t i = 0;
         while(i < index){
@@ -375,7 +375,7 @@ inline void linkedList<dataType>::checkEmpty(void) const
     // check if empty
     if(this->listSize == 0)
     {
-        logError("Empty List");
+        logError("Empty List\n");
         this->~linkedList();
         exit(1);
     }
@@ -406,7 +406,7 @@ void linkedList<dataType>::reverse(void){
     node<dataType>* tmp = nullptr;
     // std::size_t length = listSize;
     if(this->empty()){
-        logWarning("List is Empty");
+        logWarning("List is Empty\n");
         return;
     }
     while(current != nullptr)
@@ -428,7 +428,7 @@ template<typename dataType>
 void linkedList<dataType>::remove_value(dataType value){
     if(this->empty())
     {
-        logWarning("Empty List!");
+        logWarning("Empty List!\n");
         return;
     }
 
@@ -444,7 +444,7 @@ void linkedList<dataType>::remove_value(dataType value){
     }
     if(listSize ==size )
     {
-        logWarning("Value is not found in the List");
+        logWarning("Value is not found in the List\n");
         return;
     }
 }

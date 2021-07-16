@@ -1,0 +1,6 @@
+make -f "/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile" --dry-run --keep-going --print-directory
+make: Entering directory '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch'
+g++ -g -Wall  -pedantic  -I "./include"  -I "../../utils/logger/include" tests/testBS.c src/binarySearch.c  "../../utils/logger/src/logger.c" -o ./bin/testHT 
+# mv testHT ./bin
+make: Leaving directory '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch'
+ 

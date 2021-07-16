@@ -5,7 +5,7 @@
 using namespace std;
 int main(int argc, char** argv){
 
-    logInfo("Begin Testing Hashtable");
+    logInfo("Begin Testing Hashtable\n");
     hashTable<unsigned int> ht(20);
     unsigned int values[5] = {0,1,2,3,999};
     logStartLine("test (add)");

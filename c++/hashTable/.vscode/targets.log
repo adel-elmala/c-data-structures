@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul 16 17:46:52 2021
+# Make data base, printed on Fri Jul 16 22:19:39 2021
 
 # Variables
 
@@ -171,7 +171,7 @@ CC = g++
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-674e432e-c31c-45cc-8ba0-26d0e54a887b.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-f1ed3e1e-7951-460b-8ee7-a8ef861e9fc8.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -213,6 +213,8 @@ GDK_BACKEND = x11
 # environment
 LC_PAPER = en_CA.UTF-8
 # environment
+NO_AT_BRIDGE = 1
+# environment
 QT_ACCESSIBILITY = 1
 # environment
 DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
@@ -233,11 +235,11 @@ LC_ALL = C
 # environment
 DBUS_STARTER_BUS_TYPE = session
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/bc83e87f_fbb6_47ca_9cd0_fa2182318953
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/7a40d516_1f88_4fbc_a013_1f087331be9f
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.104
+GNOME_TERMINAL_SERVICE = :1.982
 # default
 SUFFIXES := 
 # environment
@@ -257,11 +259,11 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 7699
+VSCODE_PID = 20430
 # environment
 DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=93d17b4f158a8abc26ada0d360f16ca1
 # variable set hash-table stats:
-# Load=124/1024=12%, Rehash=0, Collisions=24/155=15%
+# Load=125/1024=12%, Rehash=0, Collisions=24/156=15%
 
 # Pattern-specific Variable Values
 
@@ -278,7 +280,6 @@ DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=93d17b4f158a8abc26ada0d
 
 # Files
 
- 
 # Not a target:
 all:
 #  Command line target.
@@ -286,6 +287,7 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
+ 
 .PHONY: setupDir,clean,valgrind
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -367,6 +369,6 @@ valgrind:
 # strcache performance: lookups = 22 / hit rate = 36%
 # hash-table stats:
 # Load=14/8192=0%, Rehash=0, Collisions=0/22=0%
-# Finished Make data base on Fri Jul 16 17:46:52 2021
+# Finished Make data base on Fri Jul 16 22:19:39 2021
 
  

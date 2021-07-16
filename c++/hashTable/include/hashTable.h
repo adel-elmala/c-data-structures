@@ -26,7 +26,7 @@ private:
     unsigned long int prehash(const char* k){
         if (k == nullptr)
         {
-            logError("NULL pointer encountered!");
+            logError("NULL pointer encountered!\n");
             exit(1);
         }
         unsigned  long int prehashValue = 0;
@@ -71,7 +71,7 @@ public:
 
 
     void prettyPrintHT(void){
-        for(int i = 0; i < tableSize ; ++i)
+        for(unsigned int i = 0; i < tableSize ; ++i)
         {
             hTable[i].prettyPrint();
         }
