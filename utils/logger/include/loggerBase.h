@@ -9,11 +9,11 @@
 #define _LOGGER_H_
 
 
-void logInfo(const char * str,const char * fileName,int lineNumber);
+void logInfo(const char * str,const char * fileName,int lineNumber,...);
 
-void logWarning(const char * str,const char * fileName,int lineNumber);
+void logWarning(const char * str,const char * fileName,int lineNumber,...);
 
-void logError(const char * str,const char * fileName,int lineNumber);
+void logError(const char * str,const char * fileName,int lineNumber,...);
 
 void logStartLine(const char * str);
 void logEndLine(void);

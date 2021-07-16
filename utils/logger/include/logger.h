@@ -11,9 +11,9 @@
 #include "loggerBase.h"
 
 // helper api macros 
-#define logInfo(str) logInfo(str,__FILE__,__LINE__)
-#define logWarning(str) logWarning(str,__FILE__,__LINE__)
-#define logError(str) logError(str,__FILE__,__LINE__)
+#define logInfo(str,...) logInfo(str,__FILE__,__LINE__,## __VA_ARGS__)
+#define logWarning(str,...) logWarning(str,__FILE__,__LINE__,## __VA_ARGS__)
+#define logError(str,...) logError(str,__FILE__,__LINE__,## __VA_ARGS__)
  
 
 
