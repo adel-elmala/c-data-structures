@@ -1,3 +1,10 @@
 {
-    "makefile.extensionOutputFolder": "./.vscode"
+    "makefile.extensionOutputFolder": "./.vscode",
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/bin",
+            "binaryPath": "/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/bin/testBS",
+            "binaryArgs": []
+        }
+    ]
 }

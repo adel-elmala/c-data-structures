@@ -1,4 +1,4 @@
-CC = g++
+CC = gcc
 CFLAGS = -g -Wall  -pedantic 
 
 SRC = 	tests/testBS.c \
@@ -11,10 +11,11 @@ UTILS = "../../utils/logger/src/logger.c"
 
 INCLUDE = -I "./include" 
 INCLUDE += -I "../../utils/logger/include"
+INCLUDE += -I "../../common"
 
 BIN = ./bin/
 
-testHT:$(SRC) $(HEADERS)
+testBS:$(SRC) $(HEADERS)
 	$(CC) $(CFLAGS) $(INCLUDE) $(SRC) $(UTILS) -o $(BIN)$@ 
 	# mv $@ ./bin
 
@@ -28,7 +29,7 @@ setupDir:
 clean:
 	rm bin/*
 valgrind:
-	valgrind --leak-check=full --show-leak-kinds=all $(BIN)testHT
+	valgrind --leak-check=full --show-leak-kinds=all $(BIN)testBS
 
 
 

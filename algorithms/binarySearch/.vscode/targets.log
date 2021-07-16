@@ -1,6 +1,4 @@
 make all -f "/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile" --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
- 
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul 16 21:18:52 2021
+# Make data base, printed on Fri Jul 16 23:06:07 2021
 
 # Variables
 
@@ -48,7 +46,7 @@ XMODIFIERS = @im=ibus
 CURDIR := /media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch
 # makefile
 SHELL = /bin/sh
-# makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 15)
+# makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 16)
 BIN = ./bin/
 # environment
 VTE_VERSION = 6003
@@ -169,7 +167,7 @@ QT_IM_MODULE = ibus
 # environment
 SHLVL = 1
 # makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 1)
-CC = g++
+CC = gcc
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
@@ -181,9 +179,9 @@ USER = adel
 # environment
 LC_MONETARY = en_CA.UTF-8
 # makefile
-.DEFAULT_GOAL := testHT
-# makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 13)
-INCLUDE = -I "./include"  -I "../../utils/logger/include"
+.DEFAULT_GOAL := testBS
+# makefile (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 14)
+INCLUDE = -I "./include"  -I "../../utils/logger/include" -I "../../common"
 # environment
 XDG_CURRENT_DESKTOP = Unity
 # automatic
@@ -263,7 +261,7 @@ VSCODE_PID = 20430
 # environment
 DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=93d17b4f158a8abc26ada0d360f16ca1
 # variable set hash-table stats:
-# Load=125/1024=12%, Rehash=0, Collisions=22/154=14%
+# Load=125/1024=12%, Rehash=0, Collisions=24/156=15%
 
 # Pattern-specific Variable Values
 
@@ -278,7 +276,6 @@ DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=93d17b4f158a8abc26ada0d
 
 # No implicit rules.
 
- 
 # Files
 
 # Not a target:
@@ -292,12 +289,15 @@ all:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+ 
+make: *** No rule to make target 'all'.  Stop.
+ 
 
 setupDir:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 25):
+#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 26):
 	mkdir bin tests include 
 	mv *.cpp ./tests
 	mv *.h ./include
@@ -314,24 +314,24 @@ src/binarySearch.c:
 #  Modification time never checked.
 #  File has not been updated.
 
-testHT: tests/testBS.c src/binarySearch.c include/binarySearch.h
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 18):
-	$(CC) $(CFLAGS) $(INCLUDE) $(SRC) $(UTILS) -o $(BIN)$@ 
-	# mv $@ ./bin
-
 # Not a target:
 tests/testBS.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
+testBS: tests/testBS.c src/binarySearch.c include/binarySearch.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 19):
+	$(CC) $(CFLAGS) $(INCLUDE) $(SRC) $(UTILS) -o $(BIN)$@ 
+	# mv $@ ./bin
+
 # Not a target:
 /media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-16 21:18:42.0976477
+#  Last modified 2021-07-16 23:05:23.9031404
 #  File has been updated.
 #  Successfully updated.
 
@@ -345,7 +345,7 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 29):
+#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 30):
 	rm bin/*
 
 setupDir,clean,valgrind:
@@ -358,11 +358,11 @@ valgrind:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 31):
-	valgrind --leak-check=full --show-leak-kinds=all $(BIN)testHT
+#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs path/gameDev/dataStructuresPractice/c-data-structures/algorithms/binarySearch/Makefile', line 32):
+	valgrind --leak-check=full --show-leak-kinds=all $(BIN)testBS
 
 # files hash-table stats:
-# Load=13/1024=1%, Rehash=0, Collisions=0/27=0%
+# Load=13/1024=1%, Rehash=0, Collisions=1/27=4%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
@@ -375,6 +375,6 @@ valgrind:
 # strcache performance: lookups = 23 / hit rate = 34%
 # hash-table stats:
 # Load=15/8192=0%, Rehash=0, Collisions=0/23=0%
-# Finished Make data base on Fri Jul 16 21:18:52 2021
+# Finished Make data base on Fri Jul 16 23:06:07 2021
 
  
