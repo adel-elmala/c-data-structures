@@ -1,0 +1,6 @@
+make testDA -f "/media/adel/1E9A1F939A1F6695/cs-path/gameDev/dataStructuresPractice/c-data-structures/c++/DynamicArray/Makefile" --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/dataStructuresPractice/c-data-structures/c++/DynamicArray'
+g++ -g -Wall  -pedantic  -I "./include"  -I "../../utils/logger/include" src/testDA.cpp  "../../utils/logger/src/logger.c" -o testDA 
+# mv testDA ./bin
+make: Leaving directory '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/dataStructuresPractice/c-data-structures/c++/DynamicArray'
+ 
