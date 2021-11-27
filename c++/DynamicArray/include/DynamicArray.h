@@ -47,14 +47,13 @@ namespace AlgoAdel
         // can use insert above at index 0
         void prepend(T item);
 
-        // -------- TODO  -------
-
         // remove from end, return value
         T pop(void);
 
         // delete item at index, shifting all trailing elements left
         void deleteItem(size_t index);
 
+        // -------- TODO  -------
         // looks for value and removes index holding it (even if in multiple places)
         void remove(T item);
 
@@ -76,6 +75,7 @@ namespace AlgoAdel
         data = (T *)malloc(sizeof(T) * maxCapacity);
         // memset((void*)data,5,sizeof(T) * maxCapacity);
         bzero((void *)data, sizeof(T) * maxCapacity);
+        // atexit(~DynamicArray);
         logInfo("HELLO from constructor!!!\n");
     }
 
@@ -242,6 +242,45 @@ namespace AlgoAdel
         }
     }
 
+    template <typename T>
+    void DynamicArray<T>::remove(T item)
+    {
+        if(currentSize > 0)
+        {
+            for(unsigned int i = 0;i < currentSize ; ++i)
+            {
+                if((*this)[i] == item)
+                    deleteItem(i);
+
+            }
+
+        }
+        else
+        {
+            logError("The vector is Empty, Failed to remove the requested item! ");
+            exit(EXIT_FAILURE);
+        }
+    }
+
+    template <typename T>
+    long DynamicArray<T>::find(T item)
+    {
+        if(currentSize > 0)
+        {
+            for(unsigned int i = 0;i < currentSize ; ++i)
+            {
+                if((*this)[i] == item)
+                    return i;
+                
+            }
+            return -1;
+        }
+        else
+        {
+            logError("The vector is Empty, Failed to remove the requested item! ");
+            return -1;
+        }
+    }
 }
 
 #endif

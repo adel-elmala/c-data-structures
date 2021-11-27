@@ -57,5 +57,23 @@ int main(int argc, const char *argv[])
     fprintf(stdout, "capacity:[%lu]\n", arr.capacity());
     fprintf(stdout, "is_empty:[%d]\n", arr.is_empty());
 
+    logStartLine("REMOVE !!");
+    arr.remove(99);
+    arr.prettyPrint();
+    arr.remove(123);
+    arr.prettyPrint();
+
+    fprintf(stdout, "size:[%lu]\n", arr.size());
+    fprintf(stdout, "capacity:[%lu]\n", arr.capacity());
+    fprintf(stdout, "is_empty:[%d]\n", arr.is_empty());
+
+    logStartLine("FIND !!");
+    long id = arr.find(999);
+    fprintf(stdout,"found item 999 at index [%ld]\n",id);
+
+    fprintf(stdout, "size:[%lu]\n", arr.size());
+    fprintf(stdout, "capacity:[%lu]\n", arr.capacity());
+    fprintf(stdout, "is_empty:[%d]\n", arr.is_empty());
+
     return 0;
 }

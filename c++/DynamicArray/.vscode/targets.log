@@ -1,4 +1,6 @@
 make all -f "/media/adel/1E9A1F939A1F6695/cs-path/gameDev/dataStructuresPractice/c-data-structures/c++/DynamicArray/Makefile" --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+ 
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all -f "/media/adel/1E9A1F939A1F6695/cs-path/gameDev/dataStructuresPractice
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Nov 27 12:39:48 2021
+# Make data base, printed on Sat Nov 27 17:59:31 2021
 
 # Variables
 
@@ -53,7 +55,7 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:39145
+JOURNAL_STREAM = 8:37076
 # makefile (from '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/dataStructuresPractice/c-data-structures/c++/DynamicArray/Makefile', line 2)
 CFLAGS = -g -Wall  -pedantic 
 # environment
@@ -73,13 +75,13 @@ MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=7d6e87d6e6dde796889d68cc61a20a66
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=8ae9e04c87b2dcf40561d98961a25064
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
 _ = /usr/bin/code
 # environment
-MANAGERPID = 1167
+MANAGERPID = 1158
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -93,7 +95,7 @@ PATH = /home/adel/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/adel:@/tmp/.ICE-unix/1462,unix/adel:/tmp/.ICE-unix/1462
+SESSION_MANAGER = local/adel:@/tmp/.ICE-unix/1461,unix/adel:/tmp/.ICE-unix/1461
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -103,7 +105,7 @@ VSCODE_LOG_STACK = false
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=83dfd14d-8ffd-4887-9be5-82e66370eac7&iid=83dfd14d-8ffd-4887-9be5-82e66370eac7&sid=83dfd14d-8ffd-4887-9be5-82e66370eac7","uploadToServer":true}
 # environment
-INVOCATION_ID = ec8c625fd4bd4cd49d9aeb52170fd747
+INVOCATION_ID = f359fb74211a46579e704cf6116bdd1d
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -123,7 +125,7 @@ PWD = /media/adel/1E9A1F939A1F6695/cs-path/gameDev/dataStructuresPractice/c-data
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1427
+SSH_AGENT_PID = 1426
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -171,7 +173,7 @@ CC = g++
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-559e9745-6e74-4c4f-8eef-ec9473721f3a.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-1011a064-c286-4ac5-bca1-59df6bd2371f.sock
 # environment
 OMP_NUM_THREADS = 4
 # default
@@ -235,11 +237,11 @@ LC_ALL = C
 # environment
 DBUS_STARTER_BUS_TYPE = session
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/9b667431_1010_48bf_8960_32437407988e
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/7ce08d7d_7807_44bc_b73d_78df89d2868b
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.90
+GNOME_TERMINAL_SERVICE = :1.105
 # default
 SUFFIXES := 
 # environment
@@ -259,9 +261,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 2766
+VSCODE_PID = 3885
 # environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=7d6e87d6e6dde796889d68cc61a20a66
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=8ae9e04c87b2dcf40561d98961a25064
 # variable set hash-table stats:
 # Load=126/1024=12%, Rehash=0, Collisions=22/155=14%
 
@@ -289,6 +291,7 @@ all:
 
 .PHONY: setupDir,clean,valgrind
 #  Implicit rule search has not been done.
+ 
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -308,9 +311,6 @@ testDA: src/testDA.cpp include/DynamicArray.h
 #  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/dataStructuresPractice/c-data-structures/c++/DynamicArray/Makefile', line 17):
 	$(CC) $(CFLAGS) $(INCLUDE) $(SRC) $(UTILS) -o $@ 
 	# mv $@ ./bin
- 
-make: *** No rule to make target 'all'.  Stop.
- 
 
 # Not a target:
 .DEFAULT:
@@ -371,6 +371,6 @@ valgrind:
 # strcache performance: lookups = 22 / hit rate = 36%
 # hash-table stats:
 # Load=14/8192=0%, Rehash=0, Collisions=0/22=0%
-# Finished Make data base on Sat Nov 27 12:39:48 2021
+# Finished Make data base on Sat Nov 27 17:59:31 2021
 
  
