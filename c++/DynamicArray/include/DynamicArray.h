@@ -47,6 +47,8 @@ namespace AlgoAdel
         // can use insert above at index 0
         void prepend(T item);
 
+        // -------- TODO  -------
+
         // remove from end, return value
         T pop(void);
 
@@ -63,8 +65,6 @@ namespace AlgoAdel
     };
 
 } // namespace AlgoAdel
-
-#endif
 
 namespace AlgoAdel
 {
@@ -110,7 +110,7 @@ namespace AlgoAdel
     {
         // check index is in-bounds
         if (index < maxCapacity)
-            return *(data + (index * sizeof(T)));
+            return *(data + index);
         else
         {
             logError("Out of bounds index [%u], Vector size is [%lu]!.\n", index, currentSize);
@@ -122,7 +122,7 @@ namespace AlgoAdel
     {
         // check index is in-bounds
         if (index < maxCapacity)
-            return *(data + (index * sizeof(T)));
+            return *(data + index);
         else
         {
             logError("Out of bounds index [%u], Vector size is [%lu]!.\n", index, currentSize);
@@ -146,6 +146,7 @@ namespace AlgoAdel
         data = newData;
     }
 
+    // TODO: restrict inserting into random indicies , making the vector sparse
     template <typename T>
     void DynamicArray<T>::insert(unsigned int index, T item)
     {
@@ -158,7 +159,7 @@ namespace AlgoAdel
             // no shift needed
             {
                 // *(data + (sizeof(T) * index)) = item;
-                *(data + index) = item;
+                *(data + currentSize) = item;
             }
             else // have to shift to left
             {
@@ -214,4 +215,33 @@ namespace AlgoAdel
         fprintf(stdout, " ]\n");
     }
 
+    template <typename T>
+    T DynamicArray<T>::pop(void)
+    {
+        T tempValue = (*this)[currentSize - 1];
+        (*this)[currentSize - 1] = 0;
+        --currentSize;
+        return tempValue;
+    }
+
+    template <typename T>
+    void DynamicArray<T>::deleteItem(size_t index)
+    {
+        if (index < maxCapacity)
+        {
+            for (T *i = data + index; i < data + (maxCapacity - 1); ++i)
+            {
+                *(i) = *(i + 1);
+            }
+            --currentSize;
+        }
+        else
+        {
+            logError("Out of bounds index [%lu], vector capacity is [%lu]", index, maxCapacity);
+            exit(EXIT_FAILURE);
+        }
+    }
+
 }
+
+#endif
